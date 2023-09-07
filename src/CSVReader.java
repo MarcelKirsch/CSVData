@@ -14,6 +14,7 @@ public class CSVReader {
      */
     public static void loadCSV(String path) {
         Scanner sc = null;
+        String[] st = null;
         try {
             sc = new Scanner(new File(path));
             sc.useDelimiter(";");
@@ -65,7 +66,8 @@ public class CSVReader {
 
         for (int k = 0; k < result.size(); k++) {
             System.out.println(OrdinalNumbers.zahlenBuilder(k) + " Treffer:\n");
-            for (int i = 0; i < kopfzeile.length-1; i++) {
+            //nicht kopfzeile, sondern länge des arrays
+            for (int i = 0; i < 10; i++) {
                 //Spalte + PersonInfo
                 System.out.println(kopfzeile[i] + ": " + result.get(k)[i]);
             }

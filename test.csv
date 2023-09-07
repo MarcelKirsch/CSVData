@@ -1,0 +1,101 @@
+Vorname;Nachname;Geburtsdatum;Geschlecht;Telefon-Nr.;Bundesland;Stadt;Postleitzahl;Straße;Adresszusatz;Hausnummer
+Willmar;Roßmann;10.11.1943;d;06227/60031006;Baden-Württemberg;Walldorf;69190;Schmitskamp;;163
+Gunda;Berning;15.11.1953;w;06564/30998107;Rheinland-Pfalz;Geichlingen;54675;Hackbuschstraße;;31
+Dorle;Wöstmann;05.02.1904;w;05532/20090068;Niedersachsen;Heinade;37627;Kettenweg;109 a;135
+Regine;Ernstberger;05.02.1964;w;06421/67535883;Hessen;Weimar;35096;An der Wintermaar;;156
+Fee;Bertsch;15.01.1970;w;06202/88936464;Baden-Württemberg;Plankstadt;68723;Schmelendriß;129;1
+Raimer;Stallmann;06.03.1934;m;02384/94173282;Nordrhein-Westfalen;Welver;59514;Kleine Hammerstraße;;142
+Edwin;Nicklas;08.11.1939;m;;Hessen;Obertshausen;63179;Am Pfarrgarten;;188
+Lorelies;Jungblut;31.01.1977;w;07972/55732609;Baden-Württemberg;Gschwend;74417;Winkelweg;;188
+Jannick;Dicke;23.01.2003;m;;Niedersachsen;Beesten;49832;Schlatweg;;46
+Iven;Batz;16.08.1924;m;02691/36102790;Rheinland-Pfalz;Kaltenborn;53520;Narzissenweg;;187
+Astrid;Rubin;03.01.1979;w;07023/37282480;Baden-Württemberg;Holzmaden;73271;Angelmodder Weg;;113
+Markus;Penner;24.11.1930;m;04488/96570646;Niedersachsen;Westerstede;26655;Hexentalstraße;;193
+Heidemaria;Gerards;10.08.1981;w;06343/62060067;Rheinland-Pfalz;Barbelroth;76889;Weidestraße;;93
+Mandy;Pleger;27.06.1980;w;07621/87406921;Baden-Württemberg;Lörrach;79541;Nickenicher Straße;;103
+Nadja;Helmig;02.06.1969;d;02652/13940491;Rheinland-Pfalz;Kruft;56642;Auf der Hell;;153
+Lieselotte;Gille;26.12.1973;w;030/36276660;Berlin;Lübars;13469;Steinbachweg;;19
+Carolina;Schlich;07.02.1950;w;;Rheinland-Pfalz;Dierscheid;54523;Wiesenmauer;;93
+Catrin;Hezel;15.10.1907;w;;Niedersachsen;Dahlum;38170;In den Neugärten;;101
+Rosegunde;Pollmeier;06.03.2003;w;;Schleswig-Holstein;Enge-Sande;25917;Germaniastraße;;179
+Gerlind;Spille;09.10.1916;w;09574/48217363;Bayern;Marktzeuln;96275;Sebastianstraße;;94
+Hansdieter;Gimpel;22.06.2009;m;07255/89875307;Baden-Württemberg;Graben-Neudorf;76676;Rabenweg;;162
+Framhild;Gerloff;15.01.1977;w;06564/69094820;Rheinland-Pfalz;Gemünd an der Our;54673;Neuköllner Straße;;47
+Gustav;Bartel;18.02.1912;m;06551/37754354;Rheinland-Pfalz;Buchet;54608;Schermbecker Straße;;109
+Timotheus;Gaber;10.10.2016;m;06761/8129341;Rheinland-Pfalz;Neuerkirch;55471;Auf'm Stück;;192
+Heyko;Sanders;26.07.1956;m;06323/59764438;Rheinland-Pfalz;Großfischlingen;67483;Jakob-Kneip-Straße;;170
+Nina;Wucherpfennig;04.03.2021;w;0228/38413742;Nordrhein-Westfalen;Bonn;53225;Gerwigstraße;10;121
+Welfhard;Duschek;05.02.1978;m;08051/37405199;Bayern;Rimsting;83253;Im Kappesgarten;;178
+Waldfried;Negele;21.08.1920;m;07151/39781362;Baden-Württemberg;Remshalden;73630;Obere Halle;;142
+Hartmann;Eckert;30.04.2001;m;06551/90073375;Rheinland-Pfalz;Heckhuscheid;54619;Zum Stöffel;;27
+Helmut;Osthoff;12.03.1917;m;040/47054071;Hamburg;Hamburg;20099;Haus-Gahlen-Straße;;25
+Horstfried;Klaiber;14.03.1971;m;;Schleswig-Holstein;Pahlen;25794;Zum Mühlbach;;1
+Oslinde;Wachtel;22.10.1924;w;04129/73310128;Schleswig-Holstein;Haselau;25489;Bürgerweg;;104
+Heidelore;Holzner;13.09.2018;w;;Niedersachsen;Rollshausen;37434;Mausbachstraße;;45
+Friedegund;Simsek;07.12.2013;w;06431/20536577;Hessen;Limburg an der Lahn;65556;Eschlohner Straße;;188
+Roselore;Röhrle;26.07.1921;d;04821/66036943;Schleswig-Holstein;Mehlbek;25588;Haggenmüllerstraße;;29
+Helmtraut;Stiewe;29.07.1989;w;;Rheinland-Pfalz;Malborn;54426;Moorweg;;91
+Augusta;Rosin;24.07.1942;w;07973/91558109;Baden-Württemberg;Bühlertann;74424;Oberbergstraße;24;120
+Wendelinus;Caspers;09.09.1927;m;06782/7596748;Rheinland-Pfalz;Siesbach;55767;Espenweg;;184
+Ingeruth;Flaig;11.12.1942;w;;Nordrhein-Westfalen;Grevenbroich;41515;Strahlenbach;;101
+Erk;Riedmüller;26.05.1905;m;04262/49128024;Niedersachsen;Visselhövede;27374;Lotharstraße;;31
+Engelhard;Gerbig;09.08.1979;m;;Schleswig-Holstein;Mölln;23879;Rurstraße;;148
+Alfons;Veigel;19.11.1936;d;08253/90497591;Bayern;Baar;86674;Nelkenstraße;;20
+Reintraut;Mittler;17.03.1912;w;09545/78755721;Bayern;Eggolsheim;91330;Heiligenweg;;78
+Helmfried;Härle;17.09.2019;m;06426/54660353;Hessen;Fronhausen;35112;Wischhausstraße;;21
+Antonie;Rensing;01.04.2005;w;06732/31550391;Rheinland-Pfalz;Vendersheim;55578;Emsstraße;;158
+Eckart;Hahn;09.10.1909;m;;Rheinland-Pfalz;Dausenau;56132;Bettorf;;53
+Hildeburg;Lachner;12.08.1993;w;04547/93764205;Schleswig-Holstein;Göttin;21514;Thomas-Mann-Straße;;165
+Dietmar;Pflanz;18.05.1907;d;;Rheinland-Pfalz;Albersweiler;76857;Heuslingstraße;;64
+Friedmuth;Bohrer;12.05.1942;d;;Schleswig-Holstein;Brodersby;24864;Im Garten;;9
+Siegrun;Kummer;15.12.1964;w;02662/61651437;Rheinland-Pfalz;Kroppach;57612;Schwanenstraße;;42
+Elfy;Graumann;20.07.2006;w;07263/22473927;Baden-Württemberg;Neckarbischofsheim;74924;Jakobstraße;;152
+Annamarie;Borchardt;27.03.1966;w;05334/9688384;Niedersachsen;Dorstadt;38312;Johanniterstraße;;102
+Mechtild;Hase;29.06.1938;w;08273/88306087;Bayern;Allmannshofen;86695;Buntwolfstraße;;79
+Siska;Altun;05.09.1944;w;;Niedersachsen;Braunschweig;38110;Theresienstraße;;180
+Evchen;Bohnet;22.03.1985;d;;Hessen;Ranstadt;63691;Fuchsstraße;;13
+Meinolf;Rösel;22.06.1940;m;;Rheinland-Pfalz;Nürburg;53520;Josef-Sammer-Straße;;186
+Josef;Creutz;19.10.2011;d;06501/79528241;Rheinland-Pfalz;Tawern;54456;Steinweg;;2
+Achim;Malter;09.01.1904;m;07333/77643398;Baden-Württemberg;Westerheim;72589;Marienplatz;;155
+Matis;Gollan;22.06.1972;m;;Rheinland-Pfalz;Asbach;53567;Neue Bergstraße;;189c
+Monja;Doetsch;01.04.2004;w;06724/4075911;Rheinland-Pfalz;Stromberg;55442;Rechbergweg;;150
+Herwarth;Riley;13.03.1978;m;09082/32842374;Bayern;Hainsfarth;86744;Torweg;;33 a
+Annelies;Triebe;12.05.1985;w;09086/98323186;Bayern;Fremdingen;86742;Velberter Straße;;130
+Raik;Paetz;28.05.1967;m;06743/17320205;Rheinland-Pfalz;Manubach;55413;Obere Schwelbelstraße;;188
+Aleyna;Regler;25.12.2008;w;02295/65836635;Nordrhein-Westfalen;Ruppichteroth;53809;Am Bildstock;;3
+Siska;Olk;25.07.1991;w;02671/49037463;Rheinland-Pfalz;Bruttig-Fankel;56814;Baybachstraße;;17
+Sigenot;Obert;16.04.1907;d;;Niedersachsen;Veltheim;38173;Scheurener Straße;48;9
+Helmar;Knüppel;18.08.1904;m;03902/61774277;Sachsen-Anhalt;Ellenberg;29413;Franzstraße;;121
+Jeanett;Thieme;08.01.2021;w;0651/56833556;Rheinland-Pfalz;Korlingen;54317;Nelkenweg;;3c
+Emmerich;Elbert;23.04.2007;m;;Bayern;Schlüsselfeld;96132;Ambachstraße;;143
+Berthilde;Mergenthaler;08.08.1925;w;07176/82994682;Baden-Württemberg;Mooswiese;73565;Langenbochumer Straße;;61
+Volkward;Nickel;18.06.1913;m;06034/60561444;Hessen;Niddatal;61194;Hauer Heide;;139
+Doris;Strube;28.04.1979;w;06821/93298683;Saarland;Heiligenwald;66578;Dürener Straße;109;124
+Franzi;Schanze;23.12.2016;w;09435/12962376;Bayern;Schwarzach;92548;Rudolf-Dietz-Straße;;162
+Hermi;Mechler;13.09.2011;w;;Nordrhein-Westfalen;Aachen;52070;Zum Kalkofen;;38
+Bartho;Dewald;03.07.1910;m;06464/58726202;Hessen;Steffenberg;35239;Am Bergacker;;147
+Fee;Möhlmann;12.04.2010;d;08146/40058802;Bayern;Jesenwang;82287;Steinerother Straße;;140
+Rotraut;Herrmann;12.07.1955;w;;Rheinland-Pfalz;Mengerschied;55490;Schützendelle;;52
+Ottomar;Grassl;17.04.1904;m;04965/43816902;Niedersachsen;Surwold;26903;Vor der Steinert;;65
+Ines;Schaub;01.06.2014;w;02303/86710975;Nordrhein-Westfalen;Unna;59427;Hirtsgrunder Weg;;161
+Carlheinz;Hacke;16.01.1910;m;04328/98754880;Schleswig-Holstein;Groß Kummerfeld;24626;Obstwiese;;1
+Sarah;Reinwald;28.04.1959;w;08384/45546149;Bayern;Gestratz;88167;Waldenburger Straße;;145
+Kay;Göllner;27.02.1967;m;;Nordrhein-Westfalen;Wuppertal;42111;Weidelbacher Straße;;180
+Yannick;Schlereth;05.02.1938;m;;Schleswig-Holstein;Sörup;24966;Im Viertel;;158
+Friedolf;Hoth;27.11.1919;m;06221/64732911;Baden-Württemberg;Eppelheim;69214;Marschnerstraße;187;99
+Rainald;Hagedorn;21.11.1960;m;05467/44376908;Niedersachsen;Voltlage;49599;Auf dem Hösten;;28
+Helmrich;Patzelt;26.02.1993;m;02747/90358688;Rheinland-Pfalz;Elkenroth;57578;Hochfeld;;173
+Edeltraud;Fiege;23.12.2004;w;07062/49061064;Baden-Württemberg;Abstatt;74232;Am Thekbusch;;137
+Leongard;Clemens;17.01.1923;w;04532/6965118;Schleswig-Holstein;Hammoor;22941;Im Römerkastell;;118
+Agathe;Redeker;25.10.1906;d;06788/81948185;Rheinland-Pfalz;Langweiler;67746;Hälverstraße;;92
+Arend;Warnken;03.09.1914;m;05447/13548785;Niedersachsen;Lembruch;49459;Haller Straße;;176
+Alheide;Grave;11.06.1941;w;07803/17053780;Baden-Württemberg;Ohlsbach;77797;Grube-Nassau-Straße;;38
+Beat;Newton;15.10.1966;m;07340/85075437;Baden-Württemberg;Altheim;89174;Gladbacher Straße;;104
+Renald;Dillinger;26.11.1983;m;0431/26745265;Schleswig-Holstein;Kiel;24103;Leienhöher Weg;;15
+Abraham;Heiden;07.05.1961;m;05864/46878932;Niedersachsen;Jameln;29479;Eichertstraße;;88
+Sandra;Hennig;05.07.1954;w;04934/19972040;Niedersachsen;Upgant-Schott;26529;Görresstraße;;125
+Nikolas;Claußen;16.11.1966;m;05281/92443673;Niedersachsen;Bad Pyrmont;31812;Heinrich-Schlusnus-Straße;11;64
+Gerd;Birr;23.10.2013;m;;Nordrhein-Westfalen;Dortmund;44147;Holländische Straße;;191
+Germut;Baltes;11.07.1981;m;;Berlin;Pankow;13189;Im Kamp;;148
+Trinchen;Krauße;11.05.1927;w;0211/84592068;Nordrhein-Westfalen;Düsseldorf;40468;Im Ried;;158
+Dominik;Pickel;22.01.1952;m;09194/13359708;Bayern;Pretzfeld;91362;Fuchsloch;;67
