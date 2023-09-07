@@ -7,14 +7,15 @@ public class OrdinalNumbers {
 
     public static String zahlenBuilder(int number) {
         String result = "";
+        number += 1;
 
         /* Zahlen bis 12 */
-        if (number <= 12) return einstelligeZahlen[number];
+        if (number < ordinalZahlen.length) return ordinalZahlen[number];
 
-        /* HUNDERTER */
-        if (String.valueOf(number).length() == 3)
+        if (String.valueOf(number).length() == 3)   //Hundert
             return processHundret(number);
-        if (String.valueOf(number).length() < 3)
+
+        if (String.valueOf(number).length() < 3)    //Zehner
             return processTens(number);
 
         return result;

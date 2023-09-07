@@ -64,7 +64,7 @@ public class CSVReader {
         System.out.println("****************************");
 
         for (int k = 0; k < result.size(); k++) {
-            //System.out.println(OrdinalNumbers.getOrdinalNumbers()[k] + " Treffer\n");
+            System.out.println(OrdinalNumbers.zahlenBuilder(k) + " Treffer:\n");
             for (int i = 0; i < kopfzeile.length-1; i++) {
                 //Spalte + PersonInfo
                 System.out.println(kopfzeile[i] + ": " + result.get(k)[i]);
