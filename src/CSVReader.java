@@ -66,10 +66,12 @@ public class CSVReader {
 
         for (int k = 0; k < result.size(); k++) {
             System.out.println(OrdinalNumbers.zahlenBuilder(k) + " Treffer:\n");
-            //nicht kopfzeile, sondern länge des arrays
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < kopfzeile.length; i++) {
                 //Spalte + PersonInfo
-                System.out.println(kopfzeile[i] + ": " + result.get(k)[i]);
+                try {
+                    System.out.println(kopfzeile[i] + ": " + result.get(k)[i]);
+                } catch (ArrayIndexOutOfBoundsException ignored) {}
+
             }
             System.out.println("\n");
         }
