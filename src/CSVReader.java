@@ -35,16 +35,24 @@ public class CSVReader {
     Filtert den User Input
      */
     public static List<String[]> filterEntry(String input) {
+        //Input ist in Array enthalten
+        String userInput = input.toLowerCase();
 
         List<String[]> result = new ArrayList<>();
         for (int i = 0; i < csvData.size(); i++) {
-
-            //Input ist in Array enthalten
             String dataEntryLowercase = csvData.get(i)[0].toLowerCase();
-            String userInput = input.toLowerCase();
 
-            if (dataEntryLowercase.contains(userInput)) {
-                result.add(csvData.get(i));
+            if (input.contains("*")) {
+                //WILDCARD
+                userInput = input.substring(0, input.length()-1);
+                if (dataEntryLowercase.contains(userInput)) {
+                    result.add(csvData.get(i));
+                }
+            } else {
+                //Keine Wildcard
+                if (dataEntryLowercase.equalsIgnoreCase(userInput)) {
+                    result.add(csvData.get(i));
+                }
             }
         }
         return result;
@@ -64,11 +72,21 @@ public class CSVReader {
         System.out.println("Treffer: " + result.size());
         System.out.println("****************************");
 
+        // Ausgabe
         for (int k = 0; k < result.size(); k++) {
             System.out.println(OrdinalNumbers.zahlenBuilder(k) + " Treffer:\n");
             for (int i = 0; i < kopfzeile.length; i++) {
-                //Spalte + PersonInfo
                 try {
+                    //Telefonausgabe anpassen
+                    if (kopfzeile[i].equals("Telefon-Nr.")) {
+                        result.get(k)[i] = result.get(k)[i].replace("/", ""); //empty character
+                        //0123 123 123 12
+                        result.get(k)[i] = result.get(k)[i].substring(0, 4) + " " +
+                                result.get(k)[i].substring(4, 7) + " " +
+                                result.get(k)[i].substring(7, 10) + " " +
+                                result.get(k)[i].substring(10, result.get(k)[i].length());
+                    }
+                    //Spalte + PersonInfo
                     System.out.println(kopfzeile[i] + ": " + result.get(k)[i]);
                 } catch (ArrayIndexOutOfBoundsException ignored) {}
 
