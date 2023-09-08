@@ -5,5 +5,6 @@ public class Starter {
         CSVReader.loadCSV("input.csv");
         ConsoleInput.readUserInput();
 
+//        CSVReader.loadCSVtoPerson("input.csv");
     }
 }
