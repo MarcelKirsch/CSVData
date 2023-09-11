@@ -1,3 +1,5 @@
+package org.de.csv.person;
+
 import java.util.Date;
 
 public class Person {
@@ -11,8 +13,6 @@ public class Person {
     private String plz;
     private String hausnummmer;
     private String adresszusatz;
-
-    public Person() {}
 
     public Person(String vorname, String nachname, Date geburtsDatum, String geschlecht, String telefonnr, String bundesland, String stadt, String plz, String hausnummmer, String adresszusatz) {
         this.vorname = vorname;

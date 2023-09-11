@@ -1,3 +1,5 @@
+package org.de.csv.utilities;
+
 public class OrdinalNumbers {
     private static String[] ordinalZahlen = {"", "Erster", "Zweiter", "Dritter", "Vierter", "F\u00FCnfter",
             "Sechster", "Siebter", "Achter", "Neunter", "Zehnter", "Elfter", "Zw\u00F6lfter"};
@@ -5,6 +7,7 @@ public class OrdinalNumbers {
     private static String[] einstelligeZahlen = {"", "Ein", "Zwei", "Drei", "Vier", "F\u00FCnf", "Sechs", "Sieben", "Acht", "Neun"};
     private static String[] zehnerZahlen = {"", "Zehn", "Zwanzig", "Drei\u00DFig", "Vierzig", "F\u00FCnfzig", "Sechszig", "Siebzig", "Achtzig", "Neunzig"};
 
+    private OrdinalNumbers() {}
     public static String zahlenBuilder(int number) {
         String result = "";
         number += 1;
