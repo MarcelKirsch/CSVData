@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -36,29 +38,62 @@ public class CSVReader {
     /*
     Filtert den User Input
      */
-    public static List<String[]> filterEntry(String input) {
-        //Input ist in Array enthalten
-        String userInput = input.toLowerCase();
-
+    public static List<String[]> filterEntry(String userInput) {
         List<String[]> result = new ArrayList<>();
-        for (int i = 0; i < csvData.size(); i++) {
-            String dataEntryLowercase = csvData.get(i)[0].toLowerCase();
+        String userInputLowercase = userInput.toLowerCase();
 
-            if (input.contains("*")) {
-                //WILDCARD
-                //TODO nachname und geburtsdatum hinzufügen
-                //TODO  % an % Wildcard vorne und hinten
-                userInput = input.substring(0, input.length()-1);
-                if (dataEntryLowercase.contains(userInput)) {
-                    result.add(csvData.get(i));
-                }
-            } else {
-                //Keine Wildcard
-                if (dataEntryLowercase.equalsIgnoreCase(userInput)) {
-                    result.add(csvData.get(i));
+        //Wildcard Anfang & Ende
+        if (userInputLowercase.startsWith("*") && userInputLowercase.endsWith("*")) {
+            //Wildcard entfernen
+            userInputLowercase = userInputLowercase.substring(1, userInputLowercase.length()-1);
+
+            for (String[] s : csvData) {
+                if (s[0].toLowerCase().contains(userInputLowercase)) {
+                    result.add(s);
                 }
             }
+
+
+        //Wildcard am Anfang
+        } else if (userInputLowercase.startsWith("*")) {
+            //Wildcard entfernen
+            userInputLowercase = userInputLowercase.substring(1, userInputLowercase.length());
+
+            for (String[] s : csvData) {
+                if (s[0].toLowerCase().endsWith(userInputLowercase) ||
+                        s[1].toLowerCase().endsWith(userInputLowercase)) {
+                    result.add(s);
+                }
+            }
+        //Wildcard am Ende
+        } else if (userInputLowercase.endsWith("*")) {
+            //Wildcard entfernen
+            userInputLowercase = userInputLowercase.substring(0, userInputLowercase.length()-1);
+
+            for (String[] s : csvData) {
+                if (s[0].toLowerCase().startsWith(userInputLowercase) ||
+                        s[1].toLowerCase().startsWith(userInputLowercase)) {
+                    result.add(s);
+                }
+            }
+        //Geburtsdatum
+        } else {
+            try {
+                //Datum parsen
+                DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+                Date userInputDate = dateFormat.parse(userInput);   //parse userInput to DateFormat
+
+                //Datum einfügen
+                for (String[] s : csvData) {
+                    Date csvDate = dateFormat.parse(s[2]);  //csvDate zu Date
+                    if (csvDate.equals(userInputDate)) {
+                        result.add(s);
+                    }
+                }
+
+            } catch (ParseException ignored) {}
         }
+
         return result;
     }
 
@@ -82,8 +117,11 @@ public class CSVReader {
             for (int i = 0; i < kopfzeile.length; i++) {
                 try {
                     //Telefonausgabe anpassen
-                    if (kopfzeile[i].equals("Telefon-Nr.") && !result.get(k)[i].isEmpty()) {
+                    if (kopfzeile[i].equals("Telefon-Nr.") &&
+                            result.get(k)[i] != null && !result.get(k)[i].isEmpty()) {
+
                         result.get(k)[i] = result.get(k)[i].replace("/", ""); //empty character
+
                         //0123 123 123 12
                         result.get(k)[i] = result.get(k)[i].substring(0, 4) + " " +
                                 result.get(k)[i].substring(4, 7) + " " +
@@ -92,7 +130,10 @@ public class CSVReader {
                     }
                     //Spalte + PersonInfo
                     System.out.println(kopfzeile[i] + ": " + result.get(k)[i]);
-                } catch (ArrayIndexOutOfBoundsException ignored) {}
+                } catch (ArrayIndexOutOfBoundsException ignored) {
+                    //manchmal ist kein Adresszusatz enthalten, wird damit übersprungen
+                }
+
 
             }
             System.out.println("\n");
