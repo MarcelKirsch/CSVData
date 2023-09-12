@@ -42,6 +42,28 @@ public class CsvReader {
         }
     }
 
+    //lädt die csv und gibt diese zurück
+    public static List<String[]> getCsvData(String path) {
+        List<String[]> csvData = new ArrayList<>();
+        Scanner sc = null;
+
+        try {
+            sc = new Scanner(new File(path));
+            sc.useDelimiter(";");
+            sc.nextLine(); //Kopfzeile überspringen
+
+            //Personeninfos
+            while (sc.hasNextLine()) {
+                csvData.add(sc.nextLine().split(";"));
+            }
+            sc.close();
+        } catch (FileNotFoundException e) {
+            log.warning(e.getMessage());
+        }
+
+        return csvData;
+    }
+
     /*
     Filtert den User Input
      */

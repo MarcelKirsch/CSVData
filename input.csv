@@ -1,5 +1,5 @@
 Vorname;Nachname;Geburtsdatum;Geschlecht;Telefon-Nr.;Bundesland;Stadt;Postleitzahl;Straße;Hausnummer;Adresszusatz
-Annalena;Franzfranz;01.01.2000;w;02651/71455695;Rheinland-Pfalz;Boos;56729;Regtbrink;196;
+Annalena;Franzfranz;01.01.2000;w;02651/71455695;Rheinland-Pfalz;Boos;56729;Regtbrink;196;Innenhof
 Ralph;Allmann;14.01.1987;m;;Bayern;Pfarrkirchen;84347;Mensingstraße;60;
 Heinolf;Fontaine;21.10.2011;m;06785/98008321;Rheinland-Pfalz;Mittelreidenbach;55758;Steinacker Straße;39;
 Corinna;Hofmeister;27.09.1918;w;06394/54144367;Rheinland-Pfalz;Bobenthal;76891;Eugen-Richter-Straße;188;
@@ -10,7 +10,7 @@ Franzl;Elias;01.06.1914;m;06572/89819600;Rheinland-Pfalz;Bettenfeld;54533;Behler
 Schorsch;Rudel;28.04.1939;m;07334/11141218;Baden-Württemberg;Bad Ditzenbach;73342;Maybachstraße;147;
 John;Nobis;14.06.1922;m;06620/58636827;Hessen;Philippsthal;36269;Weitefelder Garten;44;
 Helmtraud;Weinzierl;06.09.1912;w;03868/63359322;Mecklenburg-Vorpommern;Sülstorf;19077;Beuelsweg;77;
-Ursel;Petrat;22.10.1996;d;05826/25580015;Niedersachsen;Hitzacker;29456;Auf'm Stück;28;
+Ursel;Petrat;22.10.1996;d;05826/25580015;Niedersachsen;Hitzacker;29456;Aufm Stück;28;
 Stephanie;Schoen;21.12.1946;w;07634/52903668;Baden-Württemberg;Buggingen;79426;Merheimer Straße;60;
 Vivienne;Niebel;15.06.1951;w;06561/45889725;Rheinland-Pfalz;Meckel;54636;Am Weidchen;116;
 Ronja;Mecklenburg;10.12.1948;w;06551/2228768;Rheinland-Pfalz;Heckhuscheid;54619;Stolbergstraße;130c;

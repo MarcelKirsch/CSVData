@@ -1,4 +1,4 @@
 package org.de.csv.database;
 
-public class DatabaseConnect {
+public class ConnectJPA {
 }
