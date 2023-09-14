@@ -74,10 +74,10 @@ public class CsvReader {
 
         List<String[]> result = new ArrayList<>();
 
-        if (startsWith && endsWith) result = InputFilter.filterByStartAndEnd(userInput, csvData);
-        if (startsWith)             result = InputFilter.filterByBeginning(userInput, csvData);
-        if (endsWith)               result = InputFilter.filterByEnd(userInput, csvData);
-        if (result.isEmpty())       result = InputFilter.filterByBirthday(userInput, csvData);
+        if (startsWith && endsWith)     result = InputFilter.filterByStartAndEnd(userInput, csvData);
+        else if (startsWith)            result = InputFilter.filterByBeginning(userInput, csvData);
+        else if (endsWith)              result = InputFilter.filterByEnd(userInput, csvData);
+        else                            result = InputFilter.filterByWithBirthday(userInput, csvData);
 
         return result;
     }
@@ -118,8 +118,6 @@ public class CsvReader {
                 } catch (ArrayIndexOutOfBoundsException ignored) {
                     //manchmal ist kein Adresszusatz enthalten, wird damit übersprungen
                 }
-
-
             }
             System.out.println("\n");
         }
@@ -136,6 +134,7 @@ public class CsvReader {
             while (sc.hasNextLine()) {
                 String[] data = sc.nextLine().split(";");
 
+                //CSV to Person Object
                 SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
                 personen.add(new PersonBuilder()
                         .setVorname(data[0])

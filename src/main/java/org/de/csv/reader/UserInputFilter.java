@@ -65,22 +65,31 @@ public class InputFilter {
         return result;
     }
 
-    public static List<String[]> filterByBirthday (String userInput, List<String[]> csvData) {
+    public static List<String[]> filterByWithBirthday(String userInput, List<String[]> csvData) {
         List<String[]> result = new ArrayList<>();
-        try {
-            //Datum parsen
-            DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-            Date userInputDate = dateFormat.parse(userInput);   //parse userInput to DateFormat
+        userInput = userInput.toLowerCase();
 
-            //Datum einfügen
-            for (String[] s : csvData) {
-                Date csvDate = dateFormat.parse(s[2]);  //csvDate zu Date
-                if (csvDate.equals(userInputDate)) {
-                    result.add(s);
+
+        for (String[] s : csvData) {
+            //Wenn UserInput in CSV Data enthalten ist
+            if (userInput.equals(s[0].toLowerCase()) || userInput.equals(s[1].toLowerCase()))
+                result.add(s);
+
+            try {
+                //Datum parsen
+                DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+                Date userInputDate = dateFormat.parse(userInput);   //parse userInput to DateFormat
+
+                //Datum einfügen
+                for (String[] e : csvData) {
+                    Date csvDate = dateFormat.parse(e[2]);  //csvDate zu Date
+                    if (csvDate.equals(userInputDate)) {
+                        result.add(e);
+                    }
                 }
+            } catch (ParseException e) {
+                //Kein Geburtsdatum
             }
-        } catch (ParseException ignored) {
-            //Kein Geburtsdatum
         }
         return result;
     }

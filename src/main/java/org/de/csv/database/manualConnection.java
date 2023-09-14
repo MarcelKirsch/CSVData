@@ -35,7 +35,7 @@ public class manuelTransfer {
         List<String[]> csvData = CsvReader.getCsvData("input.csv"); //CSV laden
         String headerStatement = "EXEC Insert_Data_Person ";    //Prozedur zum Datenspeichern
         String insertDataString = null;
-        //wenn die csv nicht leer oder null ist
+        //TODO wenn die csv nicht leer oder null ist
 //        if (csvData.size() > 1) {   //mehr als 1 Eintrag
             StringBuilder sb = new StringBuilder();
             for (String[] s : csvData) {
@@ -53,11 +53,10 @@ public class manuelTransfer {
 
                 //Wenn Adresszusatz vorhanden ist
                 if (s.length == 11)
-                    sb.append(", @Adresszusatz = " + "'" + (s[10]) + "'" + "; \n");
+                    sb.append(", @Adresszusatz = " + "'").append(s[10]).append("'").append("; \n");
                 else
                     sb.append(", @Adresszusatz = " + "''" + "; \n");
             }
-            insertDataString = sb.toString();
             insertDataString = sb.substring(0, sb.length() - 2);   //letzte Komma wird entfernt
 //        }
         return insertDataString;

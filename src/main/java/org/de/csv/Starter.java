@@ -1,17 +1,19 @@
 package org.de.csv;
 
-import org.de.csv.database.manuelTransfer;
+import org.de.csv.interaction.ConsoleInput;
+import org.de.csv.reader.CsvReader;
 
 public class Starter {
 
     public static void main(String[] args) {
 
-        manuelTransfer db = new manuelTransfer();   //Datenbank und CSV Speicherung manuell
+//        manuelTransfer db = new manuelTransfer();   //Datenbank und CSV Speicherung manuell
+//        JpaTransfer jpadb = new JpaTransfer();      //Speicherung über JPA
 
 
         //Alte Anwendung
-//        CsvReader.loadCSV("input.csv");
-//        ConsoleInput.readUserInput();
+        CsvReader.loadCSV("input.csv");
+        ConsoleInput.readUserInput();
 
     }
 }
