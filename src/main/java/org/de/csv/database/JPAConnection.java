@@ -2,14 +2,14 @@ package org.de.csv.database;
 
 import jakarta.persistence.*;
 import org.de.csv.person.PersonEntity;
-import org.de.csv.reader.CsvReader;
+import org.de.csv.reader.CsvTools;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JpaTransfer {
+public class JPAConnection {
 
     public static void main(String[] args) {
 
@@ -26,7 +26,7 @@ public class JpaTransfer {
             query.execute();
 
             //CSV Data wird in Datenbank persistiert
-            List<PersonEntity> pe = createPerson(CsvReader.getCsvData("input.csv"));
+            List<PersonEntity> pe = createPerson(CsvTools.getCsvData("input.csv"));
             for (PersonEntity p : pe) {
                 try {
 
@@ -45,14 +45,13 @@ public class JpaTransfer {
 
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
-                    e.printStackTrace();
                 }
             }
             transaction.commit();
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            e.printStackTrace();
-            transaction.rollback();
+            if (transaction != null) //transaction may cause an null point exception
+                transaction.rollback();
         }
     }
 

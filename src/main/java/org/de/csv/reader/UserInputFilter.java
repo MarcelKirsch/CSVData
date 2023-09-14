@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class InputFilter {
+public class UserInputFilter {
 
-    private InputFilter() {}
+    private UserInputFilter() {}
 
     public static List<String[]> filterByBeginning(String userInput, List<String[]> csvData) {
         List<String[]> result = new ArrayList<>();

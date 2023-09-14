@@ -12,10 +12,10 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class CsvReader {
-    private static final Logger log = Logger.getLogger(CsvReader.class.getName());
+public class CsvTools {
+    private static final Logger log = Logger.getLogger(CsvTools.class.getName());
 
-    private CsvReader() {}
+    private CsvTools() {}
 
     private static List<String[]> csvData = new ArrayList<>();
 
@@ -74,10 +74,10 @@ public class CsvReader {
 
         List<String[]> result = new ArrayList<>();
 
-        if (startsWith && endsWith)     result = InputFilter.filterByStartAndEnd(userInput, csvData);
-        else if (startsWith)            result = InputFilter.filterByBeginning(userInput, csvData);
-        else if (endsWith)              result = InputFilter.filterByEnd(userInput, csvData);
-        else                            result = InputFilter.filterByWithBirthday(userInput, csvData);
+        if (startsWith && endsWith)     result = UserInputFilter.filterByStartAndEnd(userInput, csvData);
+        else if (startsWith)            result = UserInputFilter.filterByBeginning(userInput, csvData);
+        else if (endsWith)              result = UserInputFilter.filterByEnd(userInput, csvData);
+        else                            result = UserInputFilter.filterByWithBirthday(userInput, csvData);
 
         return result;
     }

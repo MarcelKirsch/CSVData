@@ -1,6 +1,6 @@
 package org.de.csv.interaction;
 
-import org.de.csv.reader.CsvReader;
+import org.de.csv.reader.CsvTools;
 
 import java.util.List;
 import java.util.Scanner;
@@ -20,8 +20,8 @@ public class ConsoleInput {
 
             System.out.println("Suche: ");
             userInput = sc.nextLine();
-            result =  CsvReader.filterEntry(userInput); //Filtert Ergebnis
-            CsvReader.printResult(result);              //Ausgabe CommandLine
+            result =  CsvTools.filterEntry(userInput); //Filtert Ergebnis
+            CsvTools.printResult(result);              //Ausgabe CommandLine
 
             System.out.println("Weitere Suche? j/n");
             userInput = sc.nextLine();

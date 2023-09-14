@@ -1,15 +1,17 @@
 package org.de.csv.database;
 
-import org.de.csv.reader.CsvReader;
+import org.de.csv.reader.CsvTools;
 
 import java.sql.*;
 import java.util.List;
 
-public class manuelTransfer {
+public class manualConnection {
+
+    private static final String url = "jdbc:sqlserver://192.168.2.107:1433;database=CSVData;user=mk;password=mkmkmk;encrypt=false;trustServerCertificate=false;loginTimeout=30;";
 
     public static void main(String[] args) {
 
-        try (Connection connection = DriverManager.getConnection(ConnectionURL.url);
+        try (Connection connection = DriverManager.getConnection(url);
              Statement statement = connection.createStatement()) {
 
             ResultSet rs = null;
@@ -18,11 +20,14 @@ public class manuelTransfer {
             String createTablePerson = "EXEC Create_Table_Person";
             statement.addBatch(createTablePerson);
 
-            //CSV Speichern
-            String data = createDataString();
-            statement.addBatch(data);
+            //Aus CSV Datenstring generieren
+            String data = createDataString("input.csv");
+            if (data != null) {
+                statement.addBatch(data);
+            }
 
             //abschicken und beenden
+            //duplikate werden in prozedur behandelt
             statement.executeBatch();
 
         } catch (SQLException ex) {
@@ -31,12 +36,13 @@ public class manuelTransfer {
     }
 
     //String wird erstellt, der der DB geschickt wird und CSV Daten reinspeichert
-    private static String createDataString() {
-        List<String[]> csvData = CsvReader.getCsvData("input.csv"); //CSV laden
+    private static String createDataString(String path) {
+        List<String[]> csvData = CsvTools.getCsvData(path);     //CSV laden
         String headerStatement = "EXEC Insert_Data_Person ";    //Prozedur zum Datenspeichern
         String insertDataString = null;
-        //TODO wenn die csv nicht leer oder null ist
-//        if (csvData.size() > 1) {   //mehr als 1 Eintrag
+
+        System.out.println("CSVSize " + csvData.size());
+        if (!csvData.isEmpty()) {   //mehr als 1 Eintrag
             StringBuilder sb = new StringBuilder();
             for (String[] s : csvData) {
                 sb.append(headerStatement).append(
@@ -57,8 +63,8 @@ public class manuelTransfer {
                 else
                     sb.append(", @Adresszusatz = " + "''" + "; \n");
             }
-            insertDataString = sb.substring(0, sb.length() - 2);   //letzte Komma wird entfernt
-//        }
+        insertDataString = sb.substring(0, sb.length() - 2);   //letzte Komma wird entfernt
+        }
         return insertDataString;
     }
 }
