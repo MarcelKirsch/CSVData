@@ -72,7 +72,7 @@ public class CsvTools {
         boolean startsWith = userInput.toLowerCase().startsWith("*");
         boolean endsWith = userInput.toLowerCase().endsWith("*");
 
-        List<String[]> result = new ArrayList<>();
+        List<String[]> result;
 
         if (startsWith && endsWith)     result = UserInputFilter.filterByStartAndEnd(userInput, csvData);
         else if (startsWith)            result = UserInputFilter.filterByBeginning(userInput, csvData);
@@ -155,6 +155,4 @@ public class CsvTools {
 
         return personen;
     }
-
-    public List<String[]> getCSVData() { return csvData;}
 }

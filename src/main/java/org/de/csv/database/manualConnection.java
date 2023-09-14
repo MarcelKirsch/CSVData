@@ -14,8 +14,6 @@ public class manualConnection {
         try (Connection connection = DriverManager.getConnection(url);
              Statement statement = connection.createStatement()) {
 
-            ResultSet rs = null;
-
             //Creates Table
             String createTablePerson = "EXEC Create_Table_Person";
             statement.addBatch(createTablePerson);
@@ -41,7 +39,6 @@ public class manualConnection {
         String headerStatement = "EXEC Insert_Data_Person ";    //Prozedur zum Datenspeichern
         String insertDataString = null;
 
-        System.out.println("CSVSize " + csvData.size());
         if (!csvData.isEmpty()) {   //mehr als 1 Eintrag
             StringBuilder sb = new StringBuilder();
             for (String[] s : csvData) {
